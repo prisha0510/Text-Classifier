@@ -29,8 +29,8 @@ def get_reviews(path_pos,path_neg):
     y=y.reshape((len(train_data),1))
     return train_data,num_pos,num_neg, y
 
-path_pos = "C:/Users/prish/Downloads/part1_data/part1_data/train/pos"
-path_neg = "C:/Users/prish/Downloads/part1_data/part1_data/train/neg"
+path_pos = "C:/Users/prish/Downloads/part1_data/part1_data/train/pos" #provide path of positive training data
+path_neg = "C:/Users/prish/Downloads/part1_data/part1_data/train/neg" #provide path of negative training data
 train_data,num_pos,num_neg, y=get_reviews(path_pos,path_neg)
 
 vocab = set()
@@ -85,8 +85,8 @@ accuracy = (len(train_data)-wrong)/len(train_data)
 print ("Accuracy in percentage on training data is : " + str(100*accuracy))
 
 def test_set(test_data,vocab_dict,phi_pos,phi_neg):
-    path_1 = "C:\\Users\\prish\\Downloads\\part1_data\\part1_data\\test\\pos"
-    path_2 = "C:\\Users\\prish\\Downloads\\part1_data\\part1_data\\test\\neg"
+    path_1 = "C:\\Users\\prish\\Downloads\\part1_data\\part1_data\\test\\pos" # provide the path of the positive test data
+    path_2 = "C:\\Users\\prish\\Downloads\\part1_data\\part1_data\\test\\neg" # provide the path of the negative test data
     test_data,num_pos,num_neg, y = get_reviews(path_1,path_2)
     p_pos=num_pos/(num_pos+num_neg)
     p_neg=num_neg/(num_pos+num_neg)
